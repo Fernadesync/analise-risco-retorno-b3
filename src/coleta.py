@@ -16,8 +16,8 @@ ACOES = {
 }
 BENCHMARK = "^BVSP"  # Ibovespa
 
-PASTA_RAW = Path("data/raw")
-
+RAIZ = Path(__file__).resolve().parent.parent
+PASTA_RAW = RAIZ / "data" / "raw"
 
 def baixar_precos(tickers, inicio, fim, salvar_em=None):
     """Baixa preços de fechamento ajustados (dividendos e desdobramentos).
